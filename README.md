@@ -1,5 +1,5 @@
 # Smart Home Database System 🏠
-### Database Laboratory Project (پروژه آزمایشگاه پایگاه داده)
+### Database Laboratory Project
 
 This repository contains the source code for a comprehensive **Smart Home Management Database** implemented in **Microsoft SQL Server**. The system is designed to handle device management, sensor data logging, automation scenes, and security alerts efficiently.
 
