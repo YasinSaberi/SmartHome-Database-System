@@ -1,0 +1,29 @@
+CREATE DATABASE SmartHomeDB;
+GO
+
+USE SmartHomeDB;
+GO
+
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    Username VARCHAR(50) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(256) NOT NULL,
+    FullName VARCHAR(100) NOT NULL,
+    Role VARCHAR(20) NOT NULL CHECK (Role IN ('Admin', 'Member')),
+    CreatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+CREATE TABLE Rooms (
+    RoomID INT PRIMARY KEY IDENTITY(1,1),
+    RoomName VARCHAR(50) NOT NULL,
+    FloorNumber INT NOT NULL DEFAULT 1
+);
+GO
+
+CREATE TABLE DeviceTypes (
+    TypeID INT PRIMARY KEY IDENTITY(1,1),
+    TypeName VARCHAR(50) NOT NULL UNIQUE,
+    Description VARCHAR(200) NULL
+);
+GO
